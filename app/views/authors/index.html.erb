@@ -1,0 +1,7 @@
+<h1>Here are all the Authors</h1>
+<% @authors.each do |author| %>
+
+<p> <%= link_to author.first_name + " " + author.last_name, author_path(author) %></p>
+<% end %>
+
+ <p><%= link_to "Add a new Author", new_author_path%> </p>

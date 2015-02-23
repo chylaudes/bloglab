@@ -1,0 +1,8 @@
+<h1><%= @author.first_name + " " + @author.last_name %></h1>
+<h3> Age: <%= @author.age %></h3>
+<p><%= link_to "Edit Author", edit_author_path %></p>
+<p><%= link_to "Check out the Blog!", author_posts_path(@author) %></p>
+<p><%= link_to "Back to home", authors_path %></p>
+<h2>Blog Posts:</h2>
+
+

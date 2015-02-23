@@ -1,0 +1,25 @@
+<h1>Edit the Post:</h1>
+<% if @post.errors.any? %>
+<% @post.errors.full_messages.each do |error| %>
+<p class = "text-danger">
+  <% error %>
+  <% end %>
+  <% end %>
+
+
+<%= form_for @post do |f|%>
+  <p><%= f.label :title %>
+  <%= f.text_field :title %></p>
+
+  <p><%= f.label :catagory  %>
+  <%= f.text_field :catagory %></p>
+
+    <p><%= f.label :body%>
+  <%= f.text_field :body%></p>
+
+
+  <p><%= f.submit %> <!-- creates a submit form -->
+</p>
+
+<p><%= link_to "Delete this Post!", post_path(@post), method: "DELETE", data: { confirm:"Are you sure?"}%> </p>
+<% end %>

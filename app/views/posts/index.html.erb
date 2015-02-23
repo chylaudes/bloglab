@@ -1,0 +1,9 @@
+<h1><%= @author.first_name %></h1>
+
+<h2>My Blog!</h2>
+<% @posts.each do |post| %>
+<h3><%= link_to post.title, post_path(post)%></h3>
+<% end %>
+
+ <p><%= link_to "Add a new Post", new_author_post_path(@author)%> </p>
+
